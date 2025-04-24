@@ -12,8 +12,8 @@
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/tu-usuario/biblioteca-api.git
-cd biblioteca-api
+git clone https://github.com/emaob7/library-api.git
+cd library-api
 
 # Instalar dependencias
 composer install
