@@ -1,17 +1,32 @@
-# Biblioteca API
+# 📚 Biblioteca API - Documentación Técnica
 
-API RESTful para gestión de una biblioteca en línea.
+## 🔍 Información General
+**Versión:** 1.0.0  
+**Tecnologías:**  
+- Laravel 12
+- PHP 8.4
+- MySQL 8.0
+- Sanctum (Autenticación JWT)
 
-## Requisitos
+## 🚀 Instalación Rápida
 
-- PHP 7.4+
-- Composer
-- MySQL 5.7+
-- Laravel 8+
+```bash
+# Clonar repositorio
+git clone https://github.com/tu-usuario/biblioteca-api.git
+cd biblioteca-api
 
-## Instalación
+# Instalar dependencias
+composer install
 
-1. Clonar el repositorio:
-   ```bash
-   git clone [repo-url]
-   cd library-api# library-api
+# Configurar entorno
+cp .env.example .env
+php artisan key:generate
+
+# Configurar base de datos (editar .env)
+nano .env
+
+# Ejecutar migraciones
+php artisan migrate --seed
+
+# Iniciar servidor
+php artisan serve
