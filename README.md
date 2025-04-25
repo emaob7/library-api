@@ -10,7 +10,7 @@
 
 API RESTful para la gestión de una biblioteca en línea con autenticación JWT, desarrollada con Laravel 12 y PHP 8.4.
 
-##📌 Características principales
+## 📌 Características principales
 
 ✅ Autenticación JWT (Registro, Login, Logout)
 
@@ -58,24 +58,80 @@ php artisan migrate --seed
 php artisan serve
 
 ```
-##🌐 Endpoints de la API
-# Autenticación
-Método	Endpoint	Descripción
-POST	/api/v1/auth/register	Registrar nuevo usuario
-POST	/api/v1/auth/login	Iniciar sesión
-POST	/api/v1/auth/logout	Cerrar sesión
-# Autores
-Método	Endpoint	Descripción
-GET	/api/v1/authors	Listar autores
-POST	/api/v1/authors	Crear autor
-GET	/api/v1/authors/{id}	Ver autor
-PUT	/api/v1/authors/{id}	Actualizar autor
-DELETE	/api/v1/authors/{id}	Eliminar autor
-# Libros
-Método	Endpoint	Descripción
-GET	/api/v1/books	Listar libros
-POST	/api/v1/books	Crear libro
-GET	/api/v1/books/{id}	Ver libro
-PUT	/api/v1/books/{id}	Actualizar libro
-DELETE	/api/v1/books/{id}	Eliminar libro
+## 🌐 Endpoints de la API
+
+### Autenticación
+
+| Método | Endpoint                     | Descripción                |
+|--------|------------------------------|----------------------------|
+| POST   | `/api/v1/auth/register`      | Registrar nuevo usuario    |
+| POST   | `/api/v1/auth/login`         | Iniciar sesión            |
+| POST   | `/api/v1/auth/logout`        | Cerrar sesión             |
+
+### Autores
+
+| Método | Endpoint                     | Descripción                |
+|--------|------------------------------|----------------------------|
+| GET    | `/api/v1/authors`            | Listar autores            |
+| POST   | `/api/v1/authors`            | Crear autor               |
+| GET    | `/api/v1/authors/{id}`       | Ver autor                 |
+| PUT    | `/api/v1/authors/{id}`       | Actualizar autor          |
+| DELETE | `/api/v1/authors/{id}`       | Eliminar autor            |
+
+### Libros
+
+| Método | Endpoint                     | Descripción                |
+|--------|------------------------------|----------------------------|
+| GET    | `/api/v1/books`              | Listar libros             |
+| POST   | `/api/v1/books`              | Crear libro               |
+| GET    | `/api/v1/books/{id}`         | Ver libro                 |
+| PUT    | `/api/v1/books/{id}`         | Actualizar libro          |
+| DELETE | `/api/v1/books/{id}`         | Eliminar libro            |
+
+
+## 🔐 Autenticación
+
+Para acceder a los endpoints protegidos, incluye el token JWT en el header:
+
+```http
+Authorization: Bearer [tu_token]
+```
+## 📝 Ejemplos de uso
+- Registro de usuario
+```http
+POST /api/v1/auth/register
+Content-Type: application/json
+
+{
+    "name": "Juan Perez",
+    "email": "juan@example.com",
+    "password": "password123",
+    "password_confirmation": "password123"
+}
+```
+- Crear un autor
+```http
+POST /api/v1/authors
+Authorization: Bearer [tu_token]
+Content-Type: application/json
+
+{
+    "name": "Gabriel García Márquez",
+    "birthdate": "1927-03-06",
+    "nationality": "Colombiano"
+}
+```
+- Crear un libro
+```http
+POST /api/v1/books
+Authorization: Bearer [tu_token]
+Content-Type: application/json
+
+{
+    "title": "Cien años de soledad",
+    "isbn": "9780307474728",
+    "published_date": "1967-05-30",
+    "author_id": 1
+}
+```
 
