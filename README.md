@@ -136,4 +136,4 @@ Content-Type: application/json
 ```
 ## 📌 Nota importante
 
-- Si estas utilizando Postman para probar los endpoints tendras que copiar y pegar los tokens que te genera JWT al hacer el login manualmente en Authorization/Auth Type/Api key/value/Bearer {tu token}, esta version aun no cuenta con scripts para realizar eso de manera automatica.
+- Si estas utilizando Postman para probar los endpoints tendras que copiar el token que te genera JWT al hacer el login, y pegar manualmente en Authorization/Auth Type/Api key/value/Bearer {tu token}, esta version aun no cuenta con scripts para realizar eso de manera automatica.
