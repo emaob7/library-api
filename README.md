@@ -134,4 +134,6 @@ Content-Type: application/json
     "author_id": 1
 }
 ```
+## 📌 Nota importante
 
+- Si estas utilizando Postman para probar los endpoints tendras que copiar y pegar los tokens manualmente, esta version aun no cuenta con scripts para realizar eso de manera automatica.
