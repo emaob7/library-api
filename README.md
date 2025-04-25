@@ -8,6 +8,25 @@
 - MySQL 8.0
 - Sanctum (Autenticación JWT)
 
+API RESTful para la gestión de una biblioteca en línea con autenticación JWT, desarrollada con Laravel 12 y PHP 8.4.
+
+##📌 Características principales
+✅ Autenticación JWT (Registro, Login, Logout)
+
+✅ CRUD completo para Autores
+
+✅ CRUD completo para Libros
+
+✅ Relación Autor-Libro
+
+✅ Validación de datos
+
+✅ Manejo de errores estandarizado
+
+✅ Paginación de resultados
+
+✅ Pruebas automatizadas
+
 ## 🚀 Instalación Rápida
 
 ```bash
@@ -30,3 +49,4 @@ php artisan migrate --seed
 
 # Iniciar servidor
 php artisan serve
+
